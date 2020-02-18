@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ -n "$1" ]
+then	
+	ARG=$(test/rand_g $1);
+	./push_swap $ARG | ./checker -v $ARG
+	echo -e "\nThe following random sequence (from 0 to 500) used:\n$ARG\n"
+else
+	echo "Please type num from 0 up to 35"
+fi	
